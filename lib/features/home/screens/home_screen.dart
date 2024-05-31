@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:krushisaathi/constants/colors.dart';
 import 'package:krushisaathi/constants/size_config.dart';
 import 'package:krushisaathi/constants/text_styles.dart';
@@ -24,8 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
             // ListTile(
             //   contentPadding: EdgeInsets.only(left: 30*SizeConfig.blockSizeHorizontal,right: 24,top: 32,),
             //   title: Text('Menu',style: AppTextStyles.headline2,)),
-              Padding(
-                padding: const EdgeInsets.only(left: 24,right: 24,top: 36,bottom: 12),
+              const Padding(
+                padding: EdgeInsets.only(left: 24,right: 24,top: 36,bottom: 12),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -33,46 +32,46 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              Divider(color: AppColors.primaryColor,),
+              const Divider(color: AppColors.primaryColor,),
             ListTile(
               leading: const Icon(Icons.person_2_outlined),
               title: const Text(' My Account '),
               onTap: () {
                 Navigator.pop(context);
               },
-              trailing: Icon(Icons.arrow_forward_ios_outlined),
+              trailing: const Icon(Icons.arrow_forward_ios_outlined),
             ),
             ListTile(
-              leading: ImageIcon(AssetImage('assets/Test Tube.png') ),
+              leading: const ImageIcon(AssetImage('assets/Test Tube.png') ),
               title: const Text(' Soil Analysis '),
               onTap: () {
                 Navigator.pop(context);
               },
-              trailing: Icon(Icons.arrow_forward_ios_outlined),
+              trailing: const Icon(Icons.arrow_forward_ios_outlined),
             ),
             ListTile(
-              leading: ImageIcon(AssetImage('assets/News.png') ),
+              leading: const ImageIcon(AssetImage('assets/News.png') ),
               title: const Text(' News Feed '),
               onTap: () {
                 Navigator.pop(context);
               },
-              trailing: Icon(Icons.arrow_forward_ios_outlined),
+              trailing: const Icon(Icons.arrow_forward_ios_outlined),
             ),
             ListTile(
-              leading: ImageIcon(AssetImage('assets/Online Support.png') ),
+              leading: const ImageIcon(AssetImage('assets/Online Support.png') ),
               title: const Text(' Help and Support '),
               onTap: () {
                 Navigator.pop(context);
               },
-              trailing: Icon(Icons.arrow_forward_ios_outlined),
+              trailing: const Icon(Icons.arrow_forward_ios_outlined),
             ),
             ListTile(
-              leading: ImageIcon(AssetImage('assets/Privacy Policy.png') ),
+              leading: const ImageIcon(AssetImage('assets/Privacy Policy.png') ),
               title: const Text(' Privacy Policy '),
               onTap: () {
                 Navigator.pop(context);
               },
-              trailing: Icon(Icons.arrow_forward_ios_outlined),
+              trailing: const Icon(Icons.arrow_forward_ios_outlined),
             ),
             ListTile(
               leading: const Icon(Icons.logout),
@@ -80,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: () {
                 Navigator.pop(context);
               },
-              trailing: Icon(Icons.arrow_forward_ios_outlined),
+              trailing: const Icon(Icons.arrow_forward_ios_outlined),
             ),
           ],
         ),
@@ -98,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
               width: 4 * SizeConfig.blockSizeHorizontal,
             ),
             Image.asset('assets/app_icon.jpg'),
-            Text(
+            const Text(
               'Krushisaathi',
               style: AppTextStyles.headline2,
             )
@@ -107,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          Divider(
+          const Divider(
             color: Colors.grey,
           ),
           Expanded(
@@ -117,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'Hello Shadan',
                       style: AppTextStyles.headline1,
                     ),
@@ -130,19 +129,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: 8 * SizeConfig.blockSizeHorizontal,
                 ),
-                FeaturesCard(
+                const FeaturesCard(
                     text: 'Soil Testing',
                     imagePath: 'assets/soil_testing.jpeg'),
                 SizedBox(
                   height: 2 * SizeConfig.blockSizeHorizontal,
                 ),
-                FeaturesCard(
+                const FeaturesCard(
                     text: 'How to take Soil Sample',
                     imagePath: 'assets/take_soil_sample.jpeg'),
                 SizedBox(
                   height: 2 * SizeConfig.blockSizeHorizontal,
                 ),
-                FeaturesCard(
+                const FeaturesCard(
                     text: 'Register Your Sample',
                     imagePath: 'assets/register_soil_sample.jpeg')
               ]),

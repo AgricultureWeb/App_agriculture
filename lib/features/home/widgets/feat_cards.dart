@@ -21,12 +21,12 @@ class FeaturesCard extends StatelessWidget {
               image: AssetImage(
                   imagePath),
             )),
+        alignment: Alignment.center,
         child: Text(
           text,
           style: AppTextStyles.headline1
               .copyWith(color: AppColors.backgroundColor),
         ),
-        alignment: Alignment.center,
       ),
     );
   }
