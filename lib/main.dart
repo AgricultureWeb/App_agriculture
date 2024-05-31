@@ -1,28 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:krushisaathi/common/widgets/loader.dart';
+import 'package:krushisaathi/constants/colors.dart';
 import 'package:krushisaathi/constants/size_config.dart';
+import 'package:krushisaathi/constants/text_themes.dart'; // Import your text theme
+import 'package:krushisaathi/features/auth/screens/create_account.dart';
 
 void main() {
-  runApp( 
-    const KrushiSaathi());
+  runApp(const KrushiSaathi());
 }
 
 class KrushiSaathi extends StatelessWidget {
   const KrushiSaathi({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return MaterialApp(
       title: 'KrushiSaathi',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: const ColorScheme(
+          primary: AppColors.primaryColor,
+          primaryContainer: AppColors.primaryLightColor,
+          secondary: AppColors.accentColor,
+          secondaryContainer: AppColors.primaryDarkColor,
+          surface: AppColors.surfaceColor,
+          background: AppColors.backgroundColor,
+          error: AppColors.errorColor,
+          onPrimary: AppColors.textLightGreen,
+          onSecondary: AppColors.textDarkGreen,
+          onSurface: AppColors.textColor,
+          onBackground: AppColors.textSecondaryColor,
+          onError: Colors.white,
+          brightness: Brightness.light,
+        ),
+        scaffoldBackgroundColor: AppColors.backgroundColor,
+        textTheme: AppTextThemes.textTheme,
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Loader(),
+      home: const CreateAccount(),
     );
   }
 }
-

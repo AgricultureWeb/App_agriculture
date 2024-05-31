@@ -15,15 +15,17 @@ class AppColors {
   static const Color textSecondaryColor = Color(0xFF757575); // Dark grey
 
   // Accent Colors
-  static const Color accentColor = Color(0xFF8BC34A); // Lighter green shade for accents
+  static const Color accentColor =
+      Color(0xFF8BC34A); // Lighter green shade for accents
   static const Color errorColor = Color(0xFFB00020); // Red for errors
 
   // Specific Shades
   static const Color buttonColor = primaryColor; // Primary color for buttons
   static const Color textLightGreen = Color(0xff2F9519); // Light green for text
   static const Color textDarkGreen = Color(0xff0C340D); // Dark green for text
-  static const Color textFieldGreen = Color(0xffA2BCA5); // Different green for text fields
-  static const Color dropDownButton=Color(0xff67956A);
+  static const Color textFieldGreen =
+      Color(0xffA2BCA5); // Different green for text fields
+  static const Color dropDownButton = Color(0xff67956A);
   // Additional Colors
   static const Color cardGrey = Color(0xFFD9D9D9); // Grey for cards
   static const Color hintTextGreen = Color(0xFF637865); // Hint text color
