@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:krushisaathi/constants/colors.dart';
 import 'package:krushisaathi/constants/size_config.dart';
 import 'package:krushisaathi/constants/text_themes.dart'; // Import your text theme
-import 'package:krushisaathi/features/home/screens/home_screen.dart';
+import 'package:krushisaathi/features/news/screens/news_screen.dart';
 
 void main() {
   runApp(const KrushiSaathi());
@@ -37,7 +37,7 @@ class KrushiSaathi extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: const NewsScreen(),
     );
   }
 }
