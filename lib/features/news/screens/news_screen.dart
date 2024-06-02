@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:krushisaathi/constants/colors.dart';
 import 'package:krushisaathi/constants/size_config.dart';
 import 'package:krushisaathi/constants/text_styles.dart';
@@ -24,7 +23,7 @@ class _NewsScreenState extends State<NewsScreen> {
       ),
       body: Column(
         children: [
-          Divider(),
+          const Divider(),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.only(left: 24,right: 24,top: 8,),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class AppColors {
   // Primary Colors
@@ -27,7 +28,13 @@ class AppColors {
       Color(0xffA2BCA5); // Different green for text fields
   static const Color dropDownButton = Color(0xff67956A);
   // Additional Colors
-  static const Color cardGrey = Color(0xFFD9D9D9); // Grey for cards
+  static const Color cardGrey = Color(0xFFD9D9D9);
+  static const Color cardGreen = Color(0xff92AD94,  ); // Grey for cards
   static const Color hintTextGreen = Color(0xFF637865); // Hint text color
   static const Color black = Color(0xFF000000); // Black
+
+   static const Color macronutrientColor = Color(0xFF4CAF50); // Example color
+  static const Color micronutrientColor = Color(0xFFFFC107); // Example color
+  static const Color secondaryNutrientColor = Color(0xFF2196F3); // Example color
+  static const Color physicalParamColor = Color(0xFFFF5722); // Example color
 }
