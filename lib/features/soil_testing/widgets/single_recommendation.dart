@@ -11,12 +11,12 @@ class SingleRecommendation extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           height: 110,
           width: 100,
           decoration: BoxDecoration(
               border: Border.all(width: 1),
-              borderRadius: BorderRadius.all(Radius.circular(12))),
+              borderRadius: const BorderRadius.all(Radius.circular(12))),
           child: Image.network(
             image,
             fit: BoxFit.fitHeight,

@@ -33,17 +33,17 @@ class _SmartRecommendationState extends State<SmartRecommendation> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Divider(),
+            const Divider(),
             Padding(
               padding: const EdgeInsets.only(left: 12,right: 12,top: 8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('Yard-1', style: AppTextStyles.headline2,),
+                  const Text('Yard-1', style: AppTextStyles.headline2,),
                   SizedBox(height: 2*SizeConfig.blockSizeHorizontal,),
                   Text('Fertilizer Recommendations', style: AppTextStyles.headline3.copyWith(color: AppColors.primaryColor) ,),
                     SizedBox(height: 4*SizeConfig.blockSizeHorizontal,),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                        SingleRecommendation(image: 'https://th.bing.com/th?id=OIP.igcDKUIcMuvJ4fVi-oEAqwHaJ3&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2', text: 'Liver Organic',time: '16-8=9',),
@@ -54,7 +54,7 @@ class _SmartRecommendationState extends State<SmartRecommendation> {
                     SizedBox(height: 8*SizeConfig.blockSizeHorizontal,),
                     Text('Best Crops to Grow', style: AppTextStyles.headline3.copyWith(color: AppColors.primaryColor) ,),
                     SizedBox(height: 4*SizeConfig.blockSizeHorizontal,),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                        SingleRecommendation(image: 'https://th.bing.com/th?id=OIP.igcDKUIcMuvJ4fVi-oEAqwHaJ3&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2', text: 'Rice',),
@@ -66,7 +66,7 @@ class _SmartRecommendationState extends State<SmartRecommendation> {
                     SizedBox(height: 4*SizeConfig.blockSizeHorizontal,),
                    Text('Reccomendations For Better Yield', style: AppTextStyles.headline3.copyWith(color: AppColors.primaryColor) ,),
                      SizedBox(height: 4*SizeConfig.blockSizeHorizontal,),
-                     Row(
+                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                        children: [
                          Chip(
@@ -84,7 +84,7 @@ class _SmartRecommendationState extends State<SmartRecommendation> {
                       itemBuilder: (context,index){
                       return ListTile(
 
-                      leading: Icon(Icons.star,color: AppColors.primaryColor,),
+                      leading: const Icon(Icons.star,color: AppColors.primaryColor,),
                  title: Text(recommendation[index]),
                      );
                      }),
