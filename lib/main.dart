@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:krushisaathi/constants/colors.dart';
 import 'package:krushisaathi/constants/size_config.dart';
 import 'package:krushisaathi/constants/text_themes.dart'; // Import your text theme
-import 'package:krushisaathi/features/sample_steps/screens/how_to_take_sample.dart';
+import 'package:krushisaathi/features/sample_reg/screens/registration_succes_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,7 +41,7 @@ class KrushiSaathi extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home:  const HowToTakeSample(),
+      home: const RegistrationSuccess(),
     );
   }
 }
