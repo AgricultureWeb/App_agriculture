@@ -9,6 +9,7 @@ import '../../../constants/text_styles.dart';
 import '../../../models/farm_sample_data.dart';
 
 class RegistrationSuccess extends StatefulWidget {
+   static const String routeName='/Registration-Success-Screen';
   const RegistrationSuccess({super.key});
 
   @override

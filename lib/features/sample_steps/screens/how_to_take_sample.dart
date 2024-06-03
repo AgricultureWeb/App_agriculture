@@ -6,6 +6,7 @@ import '../../../constants/colors.dart';
 import '../../../constants/text_styles.dart';
 
 class HowToTakeSample extends StatefulWidget {
+  static const String routeName = '/How-to-take-soil-sample';
   const HowToTakeSample({super.key});
 
   @override

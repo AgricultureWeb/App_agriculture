@@ -4,8 +4,10 @@ import 'package:krushisaathi/constants/assets.dart';
 import 'package:krushisaathi/constants/colors.dart';
 import 'package:krushisaathi/constants/size_config.dart';
 import 'package:krushisaathi/constants/text_styles.dart';
+import 'package:krushisaathi/features/auth/screens/create_account.dart';
 
 class LanguageScreen extends StatefulWidget {
+    static const String routeName='/Langugage-screen';
   const LanguageScreen({super.key});
 
   @override
@@ -13,6 +15,9 @@ class LanguageScreen extends StatefulWidget {
 }
 
 class _LanguageScreenState extends State<LanguageScreen> {
+  void navigateToCreateAccount(){
+    Navigator.pushReplacementNamed(context, CreateAccount.routeName);
+  }
   String selectedValue = 'English';
   @override
   Widget build(BuildContext context) {
@@ -101,7 +106,9 @@ class _LanguageScreenState extends State<LanguageScreen> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [CustomButton(text: 'Next', onSuccess: () {})],
+                    children: [CustomButton(text: 'Next', onSuccess: () {
+                      navigateToCreateAccount();
+                    })],
                   ),
                 ],
               ),

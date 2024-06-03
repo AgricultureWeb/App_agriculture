@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:krushisaathi/common/widgets/loader.dart';
 import 'package:krushisaathi/constants/colors.dart';
 import 'package:krushisaathi/constants/size_config.dart';
-import 'package:krushisaathi/constants/text_themes.dart'; // Import your text theme
-import 'package:krushisaathi/features/sample_reg/screens/registration_succes_screen.dart';
+import 'package:krushisaathi/constants/text_themes.dart';
+import 'package:krushisaathi/router.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,7 +42,8 @@ class KrushiSaathi extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const RegistrationSuccess(),
+      onGenerateRoute: (settings) => generateRoute(settings),
+      home: const Loader(),
     );
   }
 }

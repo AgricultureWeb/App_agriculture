@@ -5,6 +5,7 @@ import 'package:krushisaathi/constants/text_styles.dart';
 import 'package:krushisaathi/features/news/widgets/news_card.dart';
 
 class NewsScreen extends StatefulWidget {
+    static const String routeName='/News-Screen';
   const NewsScreen({super.key});
 
   @override

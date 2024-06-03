@@ -7,10 +7,12 @@ import 'package:krushisaathi/constants/size_config.dart';
 import 'package:krushisaathi/constants/text_styles.dart';
 import 'package:krushisaathi/features/auth/widgets/checkbox.dart';
 import 'package:krushisaathi/features/auth/widgets/user_type.dart';
+import 'package:krushisaathi/features/home/screens/home_screen.dart';
 
 import '../../../constants/global_variables.dart';
 
 class LoginScreen extends StatefulWidget {
+  static const String routeName='/Login';
   const LoginScreen({super.key});
 
   @override
@@ -31,6 +33,9 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
+void navigateToHome(){
+  Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,7 +118,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 6 * SizeConfig.blockSizeHorizontal,
                 ),
-                CustomButton(text: 'Login', onSuccess: () {}),
+                CustomButton(text: 'Login', onSuccess: () {
+                  navigateToHome();
+                }),
               ],
             ),
           ),

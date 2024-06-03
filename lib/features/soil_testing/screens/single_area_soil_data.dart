@@ -9,6 +9,7 @@ import '../../../constants/colors.dart';
 import '../../../constants/text_styles.dart';
 
 class SingleAreaSoilData extends StatelessWidget {
+   static const String routeName='/Single-Area-Soil-Data';
   const SingleAreaSoilData({super.key});
 
   @override

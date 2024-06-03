@@ -5,10 +5,13 @@ import 'package:krushisaathi/constants/assets.dart';
 import 'package:krushisaathi/constants/colors.dart';
 import 'package:krushisaathi/constants/size_config.dart';
 import 'package:krushisaathi/constants/text_styles.dart';
+import 'package:krushisaathi/features/auth/screens/login.dart';
 import 'package:krushisaathi/features/auth/widgets/custom_divider.dart';
 import 'package:krushisaathi/features/auth/widgets/upload_docs.dart';
+import 'package:krushisaathi/features/home/screens/home_screen.dart';
 
 class CreateAccount extends StatefulWidget {
+  static const String routeName= '/Create-Account';
   const CreateAccount({super.key});
 
   @override
@@ -30,6 +33,13 @@ class _CreateAccountState extends State<CreateAccount> {
     _passwordController.dispose();
     _confirmPasswordController.dispose();
     super.dispose();
+  }
+
+  void navigateToHome(){
+     Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+  }
+    void navigateToLogin(){
+ Navigator.pushNamed(context, LoginScreen.routeName);
   }
 
   @override
@@ -150,7 +160,9 @@ class _CreateAccountState extends State<CreateAccount> {
                   SizedBox(
                     height: 6 * SizeConfig.blockSizeHorizontal,
                   ),
-                  CustomButton(text: 'Create Account', onSuccess: () {}),
+                  CustomButton(text: 'Create Account', onSuccess: () {
+                    navigateToHome();
+                  }),
                   SizedBox(
                     height: 4 * SizeConfig.blockSizeHorizontal,
                   ),
@@ -159,7 +171,9 @@ class _CreateAccountState extends State<CreateAccount> {
                     height: 2 * SizeConfig.blockSizeHorizontal,
                   ),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        navigateToLogin();
+                      },
                       child: Text(
                         'Login',
                         style: AppTextStyles.headline2

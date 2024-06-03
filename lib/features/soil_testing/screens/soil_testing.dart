@@ -8,6 +8,7 @@ import '../../../constants/colors.dart';
 import '../../../constants/text_styles.dart';
 
 class SoilTestingOverView extends StatefulWidget {
+    static const String routeName='/Soil-Testing-overview';
   const SoilTestingOverView({super.key});
 
   @override

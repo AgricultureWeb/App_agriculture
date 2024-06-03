@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:krushisaathi/constants/text_styles.dart';
+import 'package:krushisaathi/features/soil_testing/screens/smart_recommedation.dart';
 
 import '../../constants/colors.dart';
 
@@ -10,7 +11,9 @@ class LongCustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(backgroundColor: AppColors.primaryColor),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, SmartRecommendation.routeName);
+      },
       child: Text(
         'View Smart Recommendations',
         style: AppTextStyles.buttonText

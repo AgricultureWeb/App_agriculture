@@ -6,8 +6,10 @@ import 'package:krushisaathi/constants/assets.dart';
 import 'package:krushisaathi/constants/colors.dart';
 import 'package:krushisaathi/constants/size_config.dart';
 import 'package:krushisaathi/constants/text_styles.dart';
+import 'package:krushisaathi/features/sample_reg/screens/registration_succes_screen.dart';
 
 class SampleRegistration extends StatefulWidget {
+    static const String routeName='/Sample-Registration';
   const SampleRegistration({super.key});
 
   @override
@@ -106,7 +108,9 @@ class _SampleRegistrationState extends State<SampleRegistration> {
                     height: 4 * SizeConfig.blockSizeHorizontal,
                   ),
                   Center(
-                      child: CustomButton(text: 'Register', onSuccess: () {})),
+                      child: CustomButton(text: 'Register', onSuccess: () {
+                        Navigator.pushNamed(context, RegistrationSuccess.routeName);
+                      })),
                   SizedBox(
                     height: 4 * SizeConfig.blockSizeHorizontal,
                   ),

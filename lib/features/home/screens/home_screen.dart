@@ -3,8 +3,13 @@ import 'package:krushisaathi/constants/colors.dart';
 import 'package:krushisaathi/constants/size_config.dart';
 import 'package:krushisaathi/constants/text_styles.dart';
 import 'package:krushisaathi/features/home/widgets/feat_cards.dart';
+import 'package:krushisaathi/features/news/screens/news_screen.dart';
+import 'package:krushisaathi/features/sample_reg/screens/sample_reg_form.dart';
+import 'package:krushisaathi/features/sample_steps/screens/how_to_take_sample.dart';
+import 'package:krushisaathi/features/soil_testing/screens/soil_testing.dart';
 
 class HomeScreen extends StatefulWidget {
+    static const String routeName='/Home-Screen';
   const HomeScreen({super.key});
 
   @override
@@ -45,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
               leading: const ImageIcon(AssetImage('assets/Test Tube.png') ),
               title: const Text(' Soil Analysis '),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, SoilTestingOverView.routeName);
               },
               trailing: const Icon(Icons.arrow_forward_ios_outlined),
             ),
@@ -53,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
               leading: const ImageIcon(AssetImage('assets/News.png') ),
               title: const Text(' News Feed '),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, NewsScreen.routeName );
               },
               trailing: const Icon(Icons.arrow_forward_ios_outlined),
             ),
@@ -130,18 +135,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 8 * SizeConfig.blockSizeHorizontal,
                 ),
                 const FeaturesCard(
+                    routeName: SoilTestingOverView.routeName,
                     text: 'Soil Testing',
                     imagePath: 'assets/soil_testing.jpeg'),
                 SizedBox(
                   height: 2 * SizeConfig.blockSizeHorizontal,
                 ),
                 const FeaturesCard(
+                  routeName: HowToTakeSample.routeName ,
                     text: 'How to take Soil Sample',
                     imagePath: 'assets/take_soil_sample.jpeg'),
                 SizedBox(
                   height: 2 * SizeConfig.blockSizeHorizontal,
                 ),
                 const FeaturesCard(
+                  routeName:SampleRegistration.routeName ,
                     text: 'Register Your Sample',
                     imagePath: 'assets/register_soil_sample.jpeg')
               ]),
