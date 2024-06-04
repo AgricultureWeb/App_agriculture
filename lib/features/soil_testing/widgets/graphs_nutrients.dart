@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:krushisaathi/constants/size_config.dart';
 import '../../../constants/colors.dart';
 import '../../../constants/text_styles.dart';
 
@@ -155,32 +156,32 @@ class NutrientsGraph extends StatelessWidget {
               getTitlesWidget: (double value, TitleMeta meta) {
                 switch (value.toInt()) {
                   case 0:
-                    return const Text('N', style: AppTextStyles.bodyText2);
+                    return Text('N', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal)  );
                   case 1:
-                    return const Text('P', style: AppTextStyles.bodyText2);
+                    return  Text('P', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                   case 2:
-                    return const Text('K', style: AppTextStyles.bodyText2);
+                    return  Text('K', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                   case 3:
-                    return const Text('Zn', style: AppTextStyles.bodyText2);
+                    return  Text('Zn', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                   case 4:
-                    return const Text('Fe', style: AppTextStyles.bodyText2);
+                    return  Text('Fe', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                   case 5:
-                    return const Text('Cu', style: AppTextStyles.bodyText2);
+                    return  Text('Cu', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                   case 6:
-                    return const Text('Mn', style: AppTextStyles.bodyText2);
+                    return  Text('Mn', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                   case 7:
-                    return const Text('B', style: AppTextStyles.bodyText2);
+                    return  Text('B', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                   case 8:
-                    return const Text('pH', style: AppTextStyles.bodyText2);
+                    return  Text('pH', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                   case 9:
-                    return const Text('Ca', style: AppTextStyles.bodyText2);
+                    return  Text('Ca', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                   case 10:
-                    return const Text('EC', style: AppTextStyles.bodyText2);
+                    return  Text('EC', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                   case 11:
-                    return const Text('OC', style: AppTextStyles.bodyText2);
+                    return  Text('OC', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                 
                   default:
-                    return const Text('', style: AppTextStyles.bodyText2);
+                    return  Text('', style: AppTextStyles.bodyText2.copyWith(fontSize: 3*SizeConfig.blockSizeHorizontal));
                 }
               },
             ),

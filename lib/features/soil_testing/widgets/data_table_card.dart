@@ -31,12 +31,14 @@ class DataTableCard extends StatelessWidget {
                 label: Container(
                   alignment: Alignment.center,
                   width: SizeConfig.blockSizeHorizontal * 18,
-                  child: const Text(
+                  child:  Text(
                     'Nutrients',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: AppColors.textLightGreen),
+                        color: AppColors.textLightGreen,
+                        fontSize: 3*SizeConfig.blockSizeHorizontal
+                        ),
                   ),
                 ),
               ),
@@ -44,7 +46,7 @@ class DataTableCard extends StatelessWidget {
                 label: Container(
                   alignment: Alignment.center,
                   width: SizeConfig.blockSizeHorizontal * 14,
-                  child: const Text(
+                  child:  Text(
                     'Your Results',
                     maxLines: 2,
                     textAlign: TextAlign.center,
@@ -52,6 +54,7 @@ class DataTableCard extends StatelessWidget {
                       color: AppColors.textLightGreen,
                       fontWeight: FontWeight.bold,
                       overflow: TextOverflow.ellipsis,
+                      fontSize: 3*SizeConfig.blockSizeHorizontal
                     ),
                   ),
                 ),
@@ -60,7 +63,7 @@ class DataTableCard extends StatelessWidget {
                 label: Container(
                   alignment: Alignment.center,
                   width: SizeConfig.blockSizeHorizontal * 14,
-                  child: const Text(
+                  child: Text(
                     maxLines: 2,
                     'Optimal Results',
                     textAlign: TextAlign.center,
@@ -68,6 +71,7 @@ class DataTableCard extends StatelessWidget {
                       color: AppColors.textLightGreen,
                       fontWeight: FontWeight.bold,
                       overflow: TextOverflow.ellipsis,
+                      fontSize: 3*SizeConfig.blockSizeHorizontal
                     ),
                   ),
                 ),
@@ -76,12 +80,13 @@ class DataTableCard extends StatelessWidget {
                 label: Container(
                   alignment: Alignment.center,
                   width: SizeConfig.blockSizeHorizontal * 14,
-                  child: const Text(
+                  child:  Text(
                     'Ratings',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: AppColors.textLightGreen),
+                        color: AppColors.textLightGreen,
+                        fontSize: 3*SizeConfig.blockSizeHorizontal),
                   ),
                 ),
               ),
@@ -91,25 +96,26 @@ class DataTableCard extends StatelessWidget {
                 cells: [
                   DataCell(Text(
                     nutrients[index],
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w500, color: Colors.black),
+                    style:  TextStyle(
+                        fontWeight: FontWeight.w500, color: Colors.black,fontSize: 2.8*SizeConfig.blockSizeHorizontal),
                   )),
                   DataCell(Center(
                     child: Text(
                       results[index],
-                      style: const TextStyle(fontWeight: FontWeight.w400),
+                      style:  TextStyle(fontWeight: FontWeight.w400,fontSize: 2.8*SizeConfig.blockSizeHorizontal),
                     ),
                   )),
                   DataCell(Center(
                     child: Text(
                       optimalResults[index],
-                      style: const TextStyle(fontWeight: FontWeight.normal),
+                      style:  TextStyle(fontWeight: FontWeight.normal,fontSize: 2.8*SizeConfig.blockSizeHorizontal),
                     ),
                   )),
                   DataCell(Center(
                     child: Text(
                       ratings[index],
                       style: TextStyle(
+                        fontSize: 2.8*SizeConfig.blockSizeHorizontal,
                         fontWeight: FontWeight.normal,
                         color:
                             ratings[index] == 'High' ? Colors.red : Colors.blue,

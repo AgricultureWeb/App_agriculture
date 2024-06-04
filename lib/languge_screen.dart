@@ -7,7 +7,7 @@ import 'package:krushisaathi/constants/text_styles.dart';
 import 'package:krushisaathi/features/auth/screens/create_account.dart';
 
 class LanguageScreen extends StatefulWidget {
-    static const String routeName='/Langugage-screen';
+  static const String routeName = '/Language-screen';
   const LanguageScreen({super.key});
 
   @override
@@ -15,10 +15,12 @@ class LanguageScreen extends StatefulWidget {
 }
 
 class _LanguageScreenState extends State<LanguageScreen> {
-  void navigateToCreateAccount(){
+  void navigateToCreateAccount() {
     Navigator.pushReplacementNamed(context, CreateAccount.routeName);
   }
+
   String selectedValue = 'English';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +32,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
             Padding(
               padding: const EdgeInsets.only(left: 22, right: 22),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
@@ -45,8 +46,9 @@ class _LanguageScreenState extends State<LanguageScreen> {
                   Text(
                     'Choose Language',
                     style: AppTextStyles.headline1.copyWith(
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.primaryColor),
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.primaryColor,
+                    ),
                   ),
                   SizedBox(
                     height: 2 * SizeConfig.blockSizeHorizontal,
@@ -67,10 +69,9 @@ class _LanguageScreenState extends State<LanguageScreen> {
                             'assets/globe.png',
                             width: 24.0,
                             height: 24.0,
-                            // color: AppColors.backgroundColor,
                           ),
                         ),
-                        contentPadding: const EdgeInsets.all(8),
+                        contentPadding:  EdgeInsets.all(3*SizeConfig.blockSizeHorizontal),
                         fillColor: AppColors.textFieldGreen,
                         filled: true,
                         enabledBorder: const OutlineInputBorder(
@@ -83,14 +84,14 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         ),
                       ),
                       dropdownColor: AppColors.textFieldGreen,
-                      items: const [
+                      items:  [
                         DropdownMenuItem(
                           value: 'English',
-                          child: Text('English'),
+                          child: Text('English' , style: TextStyle(fontSize: 4*SizeConfig.blockSizeHorizontal),),
                         ),
                         DropdownMenuItem(
                           value: 'Hindi',
-                          child: Text('Hindi'),
+                          child: Text('Hindi',style: TextStyle(fontSize: 4*SizeConfig.blockSizeHorizontal)),
                         ),
                       ],
                       onChanged: (newValue) {
@@ -102,21 +103,30 @@ class _LanguageScreenState extends State<LanguageScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 35 * SizeConfig.blockSizeHorizontal,
+                    height: 30 * SizeConfig.blockSizeHorizontal,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [CustomButton(text: 'Next', onSuccess: () {
-                      navigateToCreateAccount();
-                    })],
+                    children: [
+                      CustomButton(
+                        text: 'Next',
+                        onSuccess: navigateToCreateAccount,
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
-            SizedBox(
-              width: double.infinity,
-              child: Image.asset(Assets.bottomLoader),
-            )
+            SizedBox(height: 8*SizeConfig.blockSizeHorizontal,),
+            Flexible(
+              child: SizedBox(
+                width: double.infinity,
+                child: Image.asset(
+                  Assets.bottomLoader,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ],
         ),
       ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:krushisaathi/constants/size_config.dart';
 import 'package:krushisaathi/features/soil_testing/widgets/single_recommendation.dart';
-
 import '../../../constants/colors.dart';
 import '../../../constants/text_styles.dart';
 
@@ -46,12 +45,12 @@ class _SmartRecommendationState extends State<SmartRecommendation> {
                     style: AppTextStyles.headline2,
                   ),
                   SizedBox(
-                    height: 2 * SizeConfig.blockSizeHorizontal,
+                    height: 4 * SizeConfig.blockSizeHorizontal,
                   ),
                   Text(
                     'Fertilizer Recommendations',
                     style: AppTextStyles.headline3
-                        .copyWith(color: AppColors.primaryColor),
+                        .copyWith(color: AppColors.primaryColor ,fontSize: 5*SizeConfig.blockSizeHorizontal ),
                   ),
                   SizedBox(
                     height: 4 * SizeConfig.blockSizeHorizontal,
@@ -59,22 +58,28 @@ class _SmartRecommendationState extends State<SmartRecommendation> {
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SingleRecommendation(
-                        image:
-                            'https://th.bing.com/th?id=OIP.igcDKUIcMuvJ4fVi-oEAqwHaJ3&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2',
-                        text: 'Liver Organic',
-                        time: '16-8=9',
+                      Expanded(
+                        child: SingleRecommendation(
+                          image:
+                              'https://th.bing.com/th?id=OIP.igcDKUIcMuvJ4fVi-oEAqwHaJ3&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2',
+                          text: 'Liver Organic',
+                          time: '16-8=9',
+                        ),
                       ),
-                      SingleRecommendation(
-                          image:
-                              'https://th.bing.com/th?id=OIP.igcDKUIcMuvJ4fVi-oEAqwHaJ3&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2',
-                          text: 'Liver Organic',
-                          time: '16-8=9'),
-                      SingleRecommendation(
-                          image:
-                              'https://th.bing.com/th?id=OIP.igcDKUIcMuvJ4fVi-oEAqwHaJ3&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2',
-                          text: 'Liver Organic',
-                          time: '16-8=9'),
+                      Expanded(
+                        child: SingleRecommendation(
+                            image:
+                                'https://th.bing.com/th?id=OIP.igcDKUIcMuvJ4fVi-oEAqwHaJ3&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2',
+                            text: 'Liver Organic',
+                            time: '16-8=9'),
+                      ),
+                      Expanded(
+                        child: SingleRecommendation(
+                            image:
+                                'https://th.bing.com/th?id=OIP.igcDKUIcMuvJ4fVi-oEAqwHaJ3&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2',
+                            text: 'Liver Organic',
+                            time: '16-8=9'),
+                      ),
                     ],
                   ),
                   SizedBox(
@@ -114,7 +119,9 @@ class _SmartRecommendationState extends State<SmartRecommendation> {
                   Text(
                     'Reccomendations For Better Yield',
                     style: AppTextStyles.headline3
-                        .copyWith(color: AppColors.primaryColor),
+                        .copyWith(color: AppColors.primaryColor,
+                        fontSize: 5*SizeConfig.blockSizeHorizontal
+                        ),
                   ),
                   SizedBox(
                     height: 4 * SizeConfig.blockSizeHorizontal,

@@ -43,22 +43,24 @@ class _RegistrationSuccessState extends State<RegistrationSuccess> {
             const Divider(),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 24, right: 24, top: 2, bottom: 12),
+                  left: 20, right: 20, top: 2, bottom: 12),
               child: Column(
                 children: [
                   SizedBox(
-                    height: 100 * SizeConfig.blockSizeHorizontal,
+                    // height: 100 * SizeConfig.blockSizeHorizontal,
                     child: RegisterSuccessCard(
                       farmName: farmName,
                       samples: samples,
                     ),
                   ),
+                  SizedBox(height:2*SizeConfig.blockSizeHorizontal),
                   Text(
                     'Write the Id number against each smaple , then Please Submit all the samplels in the selected Lab!',
                     style: AppTextStyles.headline3.copyWith(
                         color: AppColors.primaryColor,
                         fontWeight: FontWeight.bold,
-                        fontSize: 22),
+                        fontSize: 5.2*SizeConfig.blockSizeHorizontal
+                        ),
                   ),
                   SizedBox(
                     height: 4 * SizeConfig.blockSizeHorizontal,

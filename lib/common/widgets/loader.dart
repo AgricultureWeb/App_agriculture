@@ -45,14 +45,13 @@ class _LoaderState extends State<Loader> {
             child: Center(
                 child: LoadingAnimationWidget.inkDrop(
               color: AppColors.primaryColor,
-              size: 40,
+              size: 10*SizeConfig.blockSizeHorizontal,
             )),
           ),
-          Container(
-            height: 200,
-            width: double.infinity,
-            alignment: Alignment.bottomCenter,
-            child: Image.asset(Assets.bottomLoader),
+          SizedBox(
+            height: 50*SizeConfig.blockSizeHorizontal,
+            width: double.infinity, 
+            child: Image.asset(Assets.bottomLoader, fit: BoxFit.cover ,),
           )
         ],
       ),

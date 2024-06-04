@@ -22,7 +22,7 @@ class DocsUpload extends StatelessWidget {
         Card(
           color: const Color(0xffEDEDED),
           child: SizedBox(
-            width: 25 * SizeConfig.blockSizeHorizontal,
+            // width: 25 * SizeConfig.blockSizeHorizontal,
             child: Padding(
               padding: const EdgeInsets.all(4.0),
               child: Column(
@@ -34,10 +34,12 @@ class DocsUpload extends StatelessWidget {
                       text,
                       maxLines: 2,
                       overflow: TextOverflow.visible,
-                      softWrap: true,
+                      // softWrap: true,
                       style: AppTextStyles.bodyText2.copyWith(
                           color: AppColors.textDarkGreen,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w400,
+                          fontSize: 3.8*SizeConfig.blockSizeHorizontal
+                          ),
                     ),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -45,16 +47,17 @@ class DocsUpload extends StatelessWidget {
                             shadowColor: Colors.transparent,
                             backgroundColor: AppColors.textFieldGreen,
                             visualDensity: VisualDensity.compact,
-                            minimumSize: const Size(20, 0),
+                            minimumSize:  Size(5*SizeConfig.blockSizeHorizontal, 0),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8)),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 18, vertical: 12)),
+                            padding:  EdgeInsets.symmetric(
+                                horizontal: 3*SizeConfig.blockSizeHorizontal, vertical: 3*SizeConfig.blockSizeHorizontal)),
                         onPressed: () {},
                         child: Text(
                           'Upload',
+                          softWrap: true,
                           style: AppTextStyles.bodyText2
-                              .copyWith(color: AppColors.black),
+                              .copyWith(color: AppColors.black, fontSize: 3.5*SizeConfig.blockSizeHorizontal ),
                         ))
                   ]),
             ),

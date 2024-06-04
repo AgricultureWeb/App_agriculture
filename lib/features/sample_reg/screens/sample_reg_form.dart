@@ -100,12 +100,12 @@ class _SampleRegistrationState extends State<SampleRegistration> {
                   SizedBox(
                     height: 4 * SizeConfig.blockSizeHorizontal,
                   ),
-                  SizedBox(
-                    height: 44 * SizeConfig.blockSizeHorizontal,
-                    child: const GovtLocCard(),
+                  const SizedBox(
+                    // height: 44 * SizeConfig.blockSizeHorizontal,
+                    child: GovtLocCard(),
                   ),
                   SizedBox(
-                    height: 4 * SizeConfig.blockSizeHorizontal,
+                    height: 8 * SizeConfig.blockSizeHorizontal,
                   ),
                   Center(
                       child: CustomButton(text: 'Register', onSuccess: () {

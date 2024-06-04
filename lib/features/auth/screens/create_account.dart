@@ -127,14 +127,21 @@ class _CreateAccountState extends State<CreateAccount> {
                             const Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                DocsUpload(
-                                  text: 'Adhaar Card',
+                                Expanded(
+                                  child: DocsUpload(
+                                    text: 'Adhaar Card',
+                                    
+                                  ),
                                 ),
-                                DocsUpload(
-                                  text: 'Address',
+                                Expanded(
+                                  child: DocsUpload(
+                                    text: 'Address',
+                                  ),
                                 ),
-                                DocsUpload(
-                                  text: 'Passbook Copy',
+                                Expanded(
+                                  child: DocsUpload(
+                                    text: 'Passbook Copy',
+                                  ),
                                 ),
                               ],
                             ),

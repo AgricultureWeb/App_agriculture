@@ -29,10 +29,13 @@ class FeaturesCard extends StatelessWidget {
                 image: AssetImage(imagePath),
               )),
           alignment: Alignment.center,
-          child: Text(
-            text,
-            style: AppTextStyles.headline1
-                .copyWith(color: AppColors.backgroundColor),
+          child: Padding(
+            padding:  EdgeInsets.all(6*SizeConfig.blockSizeHorizontal),
+            child: Text(
+              text,
+              style: AppTextStyles.headline1
+                  .copyWith(color: AppColors.backgroundColor),
+            ),
           ),
         ),
       ),

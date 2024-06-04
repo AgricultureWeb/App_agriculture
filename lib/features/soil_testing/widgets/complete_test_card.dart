@@ -21,7 +21,7 @@ class CompletedTestCard extends StatelessWidget {
         elevation: 0,
         child: Container(
           padding: const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
-          height: 15 * SizeConfig.blockSizeHorizontal,
+          // height: 15 * SizeConfig.blockSizeHorizontal,
           width: double.infinity,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -34,12 +34,15 @@ class CompletedTestCard extends StatelessWidget {
                     area,
                     style: AppTextStyles.bodyText1.copyWith(
                         color: AppColors.primaryColor,
-                        fontWeight: FontWeight.w500),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 4*SizeConfig.blockSizeHorizontal
+                        ),
                   ),
                   Text(
                     'ST10011',
                     style: AppTextStyles.bodyText2
-                        .copyWith(fontWeight: FontWeight.w500),
+                        .copyWith(fontWeight: FontWeight.w500,
+                         fontSize: 3*SizeConfig.blockSizeHorizontal),
                   ),
                 ],
               ),
@@ -47,7 +50,7 @@ class CompletedTestCard extends StatelessWidget {
               Text(
                 'June 1, 2024',
                 style: AppTextStyles.bodyText1
-                    .copyWith(fontWeight: FontWeight.w600, fontSize: 15),
+                    .copyWith(fontWeight: FontWeight.w600, fontSize: 3*SizeConfig.blockSizeHorizontal ),
               ),
               GestureDetector(
                   onTap: () {},

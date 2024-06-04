@@ -40,8 +40,8 @@ class NutrientsGraphCard extends StatelessWidget {
                 yAxis: yAxisForNutrients,
               ),
             ),
-            const SizedBox(height: 3),
-            const Text('Nutrients', style: AppTextStyles.bodyText1),
+             SizedBox(height: 4*SizeConfig.blockSizeHorizontal),
+             Text('Nutrients', style: AppTextStyles.bodyText1.copyWith(fontSize: 4*SizeConfig.blockSizeHorizontal)),
             const SizedBox(height: 3),
             Wrap(
               spacing: 8.0, // horizontal spacing

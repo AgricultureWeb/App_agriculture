@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:krushisaathi/constants/size_config.dart';
 import 'package:krushisaathi/constants/text_styles.dart';
 import 'package:krushisaathi/features/soil_testing/screens/smart_recommedation.dart';
 
@@ -17,7 +18,7 @@ class LongCustomButton extends StatelessWidget {
       child: Text(
         'View Smart Recommendations',
         style: AppTextStyles.buttonText
-            .copyWith(fontWeight: FontWeight.w500, fontSize: 16),
+            .copyWith(fontWeight: FontWeight.w500, fontSize: 4*SizeConfig.blockSizeHorizontal),
       ),
     );
   }

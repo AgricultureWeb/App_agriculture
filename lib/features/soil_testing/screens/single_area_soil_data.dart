@@ -62,11 +62,12 @@ class SingleAreaSoilData extends StatelessWidget {
             SizedBox(
               height: 4 * SizeConfig.blockSizeHorizontal,
             ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
+             Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Text(
                 'Raw Soil Data',
-                style: AppTextStyles.headline3,
+                style: AppTextStyles.headline3.copyWith(fontSize:5*SizeConfig.blockSizeHorizontal ),
+                
               ),
             ),
             const Divider(),

@@ -53,7 +53,7 @@ class _SoilTestingOverViewState extends State<SoilTestingOverView> {
           children: [
             const Divider(),
             SizedBox(
-              height: 90*SizeConfig.blockSizeHorizontal,
+              // height: 90*SizeConfig.blockSizeHorizontal,
               width: double.infinity,
               child: Padding(
                 padding: const EdgeInsets.only(left: 24, right: 24, top: 8),
@@ -65,7 +65,7 @@ class _SoilTestingOverViewState extends State<SoilTestingOverView> {
                           fontSize: 18, fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
-                      height: 55 * SizeConfig.blockSizeHorizontal,
+                      height: 58 * SizeConfig.blockSizeHorizontal,
                       child: PageView.builder(
                         controller: _pageController,
                         onPageChanged: (int page) {
@@ -84,7 +84,7 @@ class _SoilTestingOverViewState extends State<SoilTestingOverView> {
                       currentPageIndex: _currentPage,
                       totalPages: 5,
                     ),
-                    SizedBox(height: 12*SizeConfig.blockSizeHorizontal,),
+                    SizedBox(height: 8*SizeConfig.blockSizeHorizontal,),
                     Text('Completed Test',  style: AppTextStyles.bodyText1.copyWith(
                           fontSize: 18, fontWeight: FontWeight.w400),
                     ),
@@ -92,6 +92,7 @@ class _SoilTestingOverViewState extends State<SoilTestingOverView> {
                 ),
               ),
             ),
+            SizedBox(height: 2*SizeConfig.blockSizeHorizontal,),
             const Divider(),
             const YardComponent(),
           const YardComponent(),

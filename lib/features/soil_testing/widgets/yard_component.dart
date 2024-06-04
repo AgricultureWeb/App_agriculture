@@ -13,10 +13,10 @@ class YardComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 120 * SizeConfig.blockSizeHorizontal,
+      // height: 120 * SizeConfig.blockSizeHorizontal,
       width: double.infinity,
       child: Padding(
-        padding: const EdgeInsets.only(left: 24, right: 24, top: 8),
+        padding: const EdgeInsets.only(left: 24, right: 24, top: 4),
         child: Column(
           children: [
             Text(
